@@ -23,7 +23,16 @@ const router = createRouter({
               }
             ]
         },
-        
+        {
+            path: '/livros',
+            name: 'livros',
+            component: () => import('../pages/Livros.vue'),
+        },
+        {
+        path: '/livros/:id(novo|[0-9]+)',
+        name: 'livro',
+        component: () => import('../pages/FormularioLivro.vue')
+        },
     ]
 })
 
